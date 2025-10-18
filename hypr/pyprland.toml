@@ -69,21 +69,15 @@ size = "600px 800px"
 margin = 50
 unfocus = "hide"
 
-[scratchpads.notes]
-animation = "fromTop"
-command = "kitty --class kitty-notes nvim ~/Documents/quick-notes.md"
-class = "kitty-notes"
-size = "80% 85%"
-margin = 50
-unfocus = "hide"
-
 [scratchpads.files]
 animation = "fromRight"
 command = "dolphin"
-class = "dolphin"
-size = "60% 90%"
+class = "org.kde.dolphin"
+size = "80% 90%"
 margin = 50
 unfocus = "hide"
+lazy = true
+process_tracking = false
 
 [scratchpads.yazi]
 animation = "fromRight"
