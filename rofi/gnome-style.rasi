@@ -1,0 +1,81 @@
+* {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-color: #ffffff;
+    font: "Inter 16";
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    background-color: rgba(40, 40, 40, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 60%;
+    location: center;
+    anchor: center;
+    padding: 20px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 20px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+prompt {
+    text-color: #ffffff;
+    background-color: transparent;
+    margin: 0px 10px 0px 0px;
+}
+
+entry {
+    text-color: #ffffff;
+    background-color: transparent;
+    placeholder: "Search...";
+    placeholder-color: rgba(255, 255, 255, 0.5);
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    spacing: 8px;
+    background-color: transparent;
+}
+
+element {
+    background-color: transparent;
+    text-color: #ffffff;
+    orientation: horizontal;
+    border-radius: 8px;
+    padding: 12px 16px;
+    children: [element-icon, element-text];
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+element-icon {
+    size: 48px;
+    margin: 0px 16px 0px 0px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    font: "Inter 14";
+}

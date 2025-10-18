@@ -1,0 +1,9 @@
+/* Matugen Generated Colors for SwayNC */
+@define-color cc-bg {{colors.surface_container.default.hex}};
+@define-color noti-bg {{colors.surface_container_high.default.hex}};
+@define-color noti-border {{colors.outline.default.hex}};
+@define-color noti-text {{colors.on_surface.default.hex}};
+@define-color noti-close-bg {{colors.error.default.hex}};
+@define-color noti-close-hover-bg {{colors.error_container.default.hex}};
+@define-color text-selected {{colors.on_primary.default.hex}};
+@define-color bg-selected {{colors.primary.default.hex}};

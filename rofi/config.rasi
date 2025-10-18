@@ -1,0 +1,23 @@
+
+configuration {
+    modi: "drun,window,run";
+    font: "JetBrainsMono Nerd Font 14";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{name}";
+    disable-history: false;
+    case-sensitive: false;
+    cycle: true;
+    matching: "fuzzy";
+    sort: true;
+    max-history-size: 25;
+    terminal: "kitty";
+}
+
+//@theme "~/.config/rofi/theme.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+
+//@theme "/usr/share/rofi/themes/lb.rasi"
+
+@theme "/usr/share/rofi/themes/material.rasi"

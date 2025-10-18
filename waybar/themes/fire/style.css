@@ -1,0 +1,5 @@
+* { border: none; border-radius: 0; font-family: "JetBrains Mono", monospace; font-size: 13px; min-height: 0; }
+window#waybar { background: #8b0000; color: #ffd700; }
+#workspaces button { padding: 0 8px; background: #b22222; color: #ffa500; border-radius: 5px; margin: 2px; }
+#workspaces button.active { background: #ff4500; color: #000000; }
+#clock { background: #ff6347; color: #000000; padding: 0 15px; border-radius: 5px; }

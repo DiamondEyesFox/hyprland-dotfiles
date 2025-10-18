@@ -1,0 +1,24 @@
+[config]
+reload_apps = true
+reload_apps_command = "pkill waybar && sleep 0.3 && waybar &"
+set_wallpaper = false
+
+[templates.waybar-colors]
+input_path = "~/.config/matugen/templates/waybar.css"
+output_path = "~/.config/waybar/colors.css"
+
+[templates.swaync-colors]
+input_path = "~/.config/matugen/templates/swaync.css"
+output_path = "~/.config/swaync/colors.css"
+
+[templates.kitty-colors]
+input_path = "~/.config/matugen/templates/kitty.conf"
+output_path = "~/.config/kitty/kitty-colors.conf"
+
+[templates.rofi-colors]
+input_path = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/theme.rasi"
+
+[templates.hyprland-colors]
+input_path = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"

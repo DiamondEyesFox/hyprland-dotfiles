@@ -1,0 +1,202 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "cssPriority": "application",
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
+  "notification-2fa-command": true,
+  "notification-inline-replies": false,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "control-center-width": 500,
+  "control-center-height": 600,
+  "notification-window-width": 500,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    },
+    "example-action-script": {
+      "exec": "echo 'Do something actionable!'",
+      "urgency": "Normal",
+      "run-on": "action"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "title",
+    "dnd",
+    "mpris",
+    "volume",
+    "backlight",
+    "menubar",
+    "buttons-grid",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
+    },
+    "volume": {
+      "label": "♪",
+      "show-per-app": true
+    },
+    "backlight": {
+      "label": "☀",
+      "device": "intel_backlight"
+    },
+    "menubar": {
+      "menu#nordvpn": {
+        "label": "🛡️ VPN",
+        "position": "left",
+        "actions": [
+          {
+            "label": "📊 Status",
+            "command": "kitty -e sh -c 'nordvpn status; read -p \"Press enter to close...\"'"
+          },
+          {
+            "label": "🟢 Connect",
+            "command": "nordvpn connect"
+          },
+          {
+            "label": "🔴 Disconnect",
+            "command": "nordvpn disconnect"
+          },
+          {
+            "label": "🎯 Connect US",
+            "command": "nordvpn connect united_states"
+          },
+          {
+            "label": "🔧 Open GUI",
+            "command": "nordvpn-gui"
+          }
+        ]
+      },
+      "menu#steam": {
+        "label": "🎮 Steam",
+        "position": "left",
+        "actions": [
+          {
+            "label": "🚀 Open Steam",
+            "command": "steam"
+          },
+          {
+            "label": "📚 Big Picture",
+            "command": "steam steam://open/bigpicture"
+          },
+          {
+            "label": "💾 Downloads",
+            "command": "steam steam://open/downloads"
+          },
+          {
+            "label": "👥 Friends",
+            "command": "steam steam://open/friends"
+          }
+        ]
+      },
+      "menu#clipboard": {
+        "label": "📋 Clipboard",
+        "position": "left",
+        "actions": [
+          {
+            "label": "📄 Show History",
+            "command": "copyq toggle"
+          },
+          {
+            "label": "🗑️ Clear History",
+            "command": "copyq clear"
+          },
+          {
+            "label": "⚙️ Settings",
+            "command": "copyq config"
+          }
+        ]
+      },
+      "menu#system": {
+        "label": "⚙️ System",
+        "position": "right",
+        "actions": [
+          {
+            "label": "🔄 Reload Waybar",
+            "command": "killall waybar && waybar &"
+          },
+          {
+            "label": "🔄 Reload Hyprland",
+            "command": "hyprctl reload"
+          },
+          {
+            "label": "📊 System Monitor",
+            "command": "kitty -e htop"
+          },
+          {
+            "label": "🚪 Logout",
+            "command": "~/.config/hypr/scripts/exit-hyprland.sh"
+          }
+        ]
+      }
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰤨 WiFi",
+          "command": "better-control"
+        },
+        {
+          "label": "󰂯 Bluetooth",
+          "command": "better-control"
+        },
+        {
+          "label": " Audio",
+          "command": "better-control"
+        },
+        {
+          "label": " Settings",
+          "command": "better-control"
+        },
+        {
+          "label": " Clipboard",
+          "command": "sleep 0.1 && ~/.config/waybar/scripts/cliphist.sh"
+        },
+        {
+          "label": "󰋜 Delete Clipboard",
+          "command": "sleep 0.1 && ~/.config/waybar/scripts/cliphist.sh d"
+        }
+      ]
+    }
+  }
+}

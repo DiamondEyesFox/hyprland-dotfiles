@@ -1,0 +1,41 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["bluetooth", "network", "pulseaudio", "tray"],
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
+  },
+  
+  "clock": {
+    "format": "{:%H:%M %d/%m}",
+    "tooltip-format": "{:%A, %B %d, %Y}"
+  },
+  
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": " connected",
+    "format-disconnected": "⚠ disconnected"
+  },
+  
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "format-icons": ["🔈", "🔉", "🔊"]
+  },
+  
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}"
+  }
+}

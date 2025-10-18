@@ -1,0 +1,161 @@
+/* Enhanced Media Player Styling */
+
+/* ===== MEDIA ICON IN TOP BAR ===== */
+#custom-media {
+    padding: 0 12px;
+    margin: 0 4px;
+    border-radius: 8px;
+    background: rgba(30, 30, 46, 0.8);
+    font-size: 16px;
+    min-width: 30px;
+}
+
+/* Animated pulsing effect when playing */
+#custom-media.custom-media-playing {
+    color: #a6e3a1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+#custom-media.custom-media-paused {
+    color: #f9e2af;
+}
+
+#custom-media.custom-media-stopped {
+    color: #6c7086;
+}
+
+/* Hover effect on media icon */
+#custom-media:hover {
+    background: rgba(40, 40, 56, 0.9);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* ===== BOTTOM PROGRESS BAR ===== */
+#custom-media-bar {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    font-size: 3px;
+    line-height: 3px;
+    min-height: 3px;
+    color: #89b4fa;
+}
+
+.media-bar-playing {
+    color: #a6e3a1;
+    background: linear-gradient(90deg, #a6e3a1 0%, #89b4fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: progress-glow 2s ease-in-out infinite;
+}
+
+@keyframes progress-glow {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+}
+
+.media-bar-paused {
+    color: #f9e2af;
+}
+
+.media-bar-hidden {
+    display: none;
+}
+
+/* ===== HOVER OVERLAY (TOOLTIP) ===== */
+/* This will show on hover over the progress bar or media icon */
+tooltip {
+    background: rgba(30, 30, 46, 0.95);
+    border: 2px solid #89b4fa;
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+}
+
+tooltip label {
+    color: #cdd6f4;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ===== MEDIA CONTROLS STYLING ===== */
+/* These styles will be used when we add the full player overlay */
+.media-overlay {
+    background: rgba(30, 30, 46, 0.95);
+    border: 2px solid #89b4fa;
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.media-album-art {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.media-title {
+    color: #cdd6f4;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.media-artist {
+    color: #bac2de;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.media-album {
+    color: #a6adc8;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.media-controls-button {
+    background: rgba(137, 180, 250, 0.2);
+    border: 1px solid #89b4fa;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 8px;
+    transition: all 0.2s ease;
+}
+
+.media-controls-button:hover {
+    background: rgba(137, 180, 250, 0.4);
+    transform: scale(1.1);
+}
+
+.media-controls-button:active {
+    transform: scale(0.95);
+}
+
+/* Progress bar in overlay */
+.media-progress-slider {
+    background: rgba(108, 112, 134, 0.3);
+    border-radius: 4px;
+    height: 6px;
+}
+
+.media-progress-fill {
+    background: linear-gradient(90deg, #a6e3a1, #89b4fa);
+    border-radius: 4px;
+    height: 6px;
+    transition: width 0.3s ease;
+}

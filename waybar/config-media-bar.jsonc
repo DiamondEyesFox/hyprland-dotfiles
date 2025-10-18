@@ -1,0 +1,21 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 3,
+  "margin": "0",
+  "exclusive": false,
+  "passthrough": false,
+  "reload_style_on_change": true,
+
+  "modules-left": [],
+  "modules-center": ["custom/media-bar"],
+  "modules-right": [],
+
+  "custom/media-bar": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/media-bar.py",
+    "interval": 1,
+    "tooltip": false
+  }
+}

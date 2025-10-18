@@ -1,0 +1,149 @@
+/* Waybar Custom Style */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.9);
+    border-radius: 10px;
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Workspaces */
+#workspaces {
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #6c7086;
+    border-radius: 6px;
+}
+
+#workspaces button:hover {
+    background: rgba(108, 112, 134, 0.2);
+}
+
+#workspaces button.active {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+#workspaces button.urgent {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+}
+
+/* Window Title */
+#window {
+    margin: 0 4px;
+    padding: 0 8px;
+    color: #cdd6f4;
+}
+
+/* Clock */
+#clock {
+    padding: 0 8px;
+    color: #f9e2af;
+    font-weight: bold;
+}
+
+/* System Tray */
+#tray {
+    padding: 0 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb6f92;
+}
+
+/* Right side modules */
+#pulseaudio,
+#bluetooth,
+#network,
+#battery,
+#custom-network_manager,
+#custom-power {
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 6px;
+    background-color: rgba(108, 112, 134, 0.1);
+}
+
+#pulseaudio {
+    color: #89b4fa;
+}
+
+#bluetooth {
+    color: #74c7ec;
+}
+
+#bluetooth.disabled {
+    color: #6c7086;
+}
+
+#network {
+    color: #a6e3a1;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+}
+
+#battery {
+    color: #f9e2af;
+}
+
+#battery.charging {
+    color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f9e2af;
+    color: #1e1e2e;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-network_manager {
+    color: #cba6f7;
+}
+
+#custom-power {
+    color: #f38ba8;
+}
+
+#custom-power:hover {
+    background-color: rgba(243, 139, 168, 0.2);
+}
+
+@keyframes blink {
+    to {
+        background-color: #1e1e2e;
+        color: #f38ba8;
+    }
+}

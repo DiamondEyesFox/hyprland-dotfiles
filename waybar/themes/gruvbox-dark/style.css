@@ -1,0 +1,49 @@
+/* Gruvbox Dark */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #282828;
+    color: #ebdbb2;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: #3c3836;
+    color: #a89984;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+#workspaces button.active {
+    background: #d79921;
+    color: #282828;
+}
+
+#clock {
+    background: #458588;
+    color: #ebdbb2;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+#network {
+    background: #689d6a;
+    color: #282828;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+#pulseaudio {
+    background: #d65d0e;
+    color: #ebdbb2;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 0 2px;
+}

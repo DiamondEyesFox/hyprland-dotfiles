@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="nm-editor">
+        <property name="label">Network Settings</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="wifi-toggle">
+        <property name="label">Toggle WiFi</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="scan">
+        <property name="label">Scan Networks</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="disconnect">
+        <property name="label">Disconnect</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="reconnect">
+        <property name="label">Reconnect</property>
+      </object>
+    </child>
+  </object>
+</interface>

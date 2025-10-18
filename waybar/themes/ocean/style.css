@@ -1,0 +1,6 @@
+* { border: none; border-radius: 0; font-family: "JetBrains Mono", monospace; font-size: 13px; min-height: 0; }
+window#waybar { background: #0f4c75; color: #e8f4f8; }
+#workspaces button { padding: 0 8px; background: #1b6ec2; color: #a8dadc; border-radius: 5px; margin: 2px; }
+#workspaces button.active { background: #457b9d; color: #f1faee; }
+#clock { background: #1d3557; color: #f1faee; padding: 0 15px; border-radius: 5px; }
+#network { background: #a8dadc; color: #1d3557; padding: 0 10px; border-radius: 5px; margin: 0 2px; }

@@ -1,0 +1,25 @@
+# Session/cache files
+*.log
+*.cache
+**/cache/
+**/.cache/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Session files
+hypr/sessions/
+hypr/**/*.json
+
+# Matugen generated files (will be regenerated)
+waybar/colors.css
+kitty/kitty-colors.conf
+swaync/colors.css
+hypr/colors.conf
+
+# Personal scripts with credentials
+**/*credentials*
+**/*secret*
+**/*private*

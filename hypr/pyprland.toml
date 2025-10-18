@@ -1,0 +1,73 @@
+# Pyprland Configuration
+# Documentation: https://github.com/hyprland-community/pyprland
+
+[pyprland]
+plugins = [
+    "scratchpads",
+    "expose",
+    "toggle_special",
+]
+
+# Scratchpads - Dropdown terminals and utilities
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "75% 60%"
+max_size = "1920px 100%"
+margin = 50
+unfocus = "hide"
+
+[scratchpads.claude]
+animation = "fromTop"
+command = "kitty --class kitty-claude claude"
+class = "kitty-claude"
+size = "85% 85%"
+max_size = "1920px 100%"
+margin = 30
+unfocus = "hide"
+
+[scratchpads.keybinds]
+animation = "fromTop"
+command = "kitty --class kitty-keybinds bash ~/.config/hypr/scripts/keybinds-cheatsheet.sh"
+class = "kitty-keybinds"
+size = "95% 90%"
+max_size = "2400px 100%"
+margin = 20
+unfocus = "hide"
+
+[scratchpads.btop]
+animation = "fromTop"
+command = "kitty --class kitty-btop btop"
+class = "kitty-btop"
+size = "75% 75%"
+margin = 50
+unfocus = "hide"
+
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol"
+class = "pavucontrol"
+size = "40% 90%"
+unfocus = "hide"
+
+[scratchpads.music]
+animation = "fromBottom"
+command = "flatpak run com.plexamp.Plexamp"
+class = "Plexamp"
+size = "80% 85%"
+margin = 50
+unfocus = "hide"
+lazy = true
+process_tracking = false
+
+# Expose - Show all windows (like macOS Mission Control)
+[expose]
+include_special = false
+size = 250
+bg_opacity = 0.3
+show_empty_workspaces = false
+
+# Toggle special workspaces
+[toggle_special]
+# No additional config needed
