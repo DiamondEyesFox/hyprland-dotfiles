@@ -61,6 +61,14 @@ unfocus = "hide"
 lazy = true
 process_tracking = false
 
+[scratchpads.calc]
+animation = "fromTop"
+command = "qalculate-gtk"
+class = "qalculate-gtk"
+size = "600px 800px"
+margin = 50
+unfocus = "hide"
+
 # Expose - Show all windows (like macOS Mission Control)
 [expose]
 include_special = false
