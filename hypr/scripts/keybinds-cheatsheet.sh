@@ -12,22 +12,29 @@ GREEN='\033[0;32m'
 MAGENTA='\033[0;35m'
 RESET='\033[0m'
 
+# Get terminal dimensions and calculate centering
+TERM_WIDTH=$(tput cols)
+CONTENT_WIDTH=145
+PADDING=$(( (TERM_WIDTH - CONTENT_WIDTH) / 2 ))
+[[ $PADDING -lt 0 ]] && PADDING=0
+SPACES=$(printf "%${PADDING}s" "")
+
 clear
 
 echo -e "${BOLD}${CYAN}"
-echo "╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗"
-echo "║                                                    HYPRLAND KEYBINDS CHEATSHEET                                                                      ║"
-echo "╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"
+echo "${SPACES}╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗"
+echo "${SPACES}║                                                    HYPRLAND KEYBINDS CHEATSHEET                                                                      ║"
+echo "${SPACES}╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"
 echo -e "${RESET}"
 
-# Two column layout function
+# Two column layout function with centering
 print_two_cols() {
     local left="$1"
     local right="$2"
-    echo -e "$(printf "%-110s" "$left")$right"
+    echo -e "${SPACES}$(printf "%-110s" "$left")$right"
 }
 
-echo -e "${BOLD}${CYAN}🚀 LAUNCHERS & APPS${RESET}                                              ${BOLD}${CYAN}🪟 WINDOW MANAGEMENT${RESET}"
+echo -e "${SPACES}${BOLD}${CYAN}🚀 LAUNCHERS & APPS${RESET}                                              ${BOLD}${CYAN}🪟 WINDOW MANAGEMENT${RESET}"
 print_two_cols "  ${GREEN}Super Return${RESET}          → Terminal" "  ${GREEN}Super Q${RESET}               → Kill active window"
 print_two_cols "  ${GREEN}Alt Space${RESET}             → Rofi launcher" "  ${GREEN}Super V${RESET}               → Toggle floating"
 print_two_cols "  ${GREEN}Super E${RESET}               → File manager" "  ${GREEN}Super F${RESET}               → Fullscreen"
@@ -37,7 +44,7 @@ print_two_cols "" "  ${GREEN}Super Arrow Keys${RESET}      → Move focus"
 print_two_cols "" "  ${GREEN}Super Shift Arrows${RESET}    → Move window"
 
 echo ""
-echo -e "${BOLD}${CYAN}📦 SCRATCHPADS${RESET}                                                       ${BOLD}${CYAN}🖥️  WORKSPACES${RESET}"
+echo -e "${SPACES}${BOLD}${CYAN}📦 SCRATCHPADS${RESET}                                                       ${BOLD}${CYAN}🖥️  WORKSPACES${RESET}"
 print_two_cols "  ${GREEN}Super Space${RESET}           → Terminal" "  ${GREEN}Super 1-9, 0${RESET}          → Switch workspace"
 print_two_cols "  ${GREEN}Ctrl Space${RESET}            → Claude AI" "  ${GREEN}Super Shift 1-9, 0${RESET}    → Move to workspace"
 print_two_cols "  ${GREEN}Super K${RESET}               → Keybinds" "  ${GREEN}Super S${RESET}               → Toggle special"
@@ -53,14 +60,14 @@ print_two_cols "  ${GREEN}Super J${RESET}               → Anki" ""
 print_two_cols "  ${GREEN}Super Shift V${RESET}         → Volume" ""
 
 echo ""
-echo -e "${BOLD}${CYAN}🎵 MEDIA${RESET}                                                             ${BOLD}${CYAN}📸 SCREENSHOTS & BRIGHTNESS${RESET}"
+echo -e "${SPACES}${BOLD}${CYAN}🎵 MEDIA${RESET}                                                             ${BOLD}${CYAN}📸 SCREENSHOTS & BRIGHTNESS${RESET}"
 print_two_cols "  ${GREEN}Media Keys${RESET}            → Next/Prev/Play/Pause" "  ${GREEN}Alt Shift 3/4/5${RESET}      → Full/Region/Menu"
 print_two_cols "  ${GREEN}Volume Keys${RESET}           → Up/Down/Mute" "  ${GREEN}Print${RESET}                 → Quick screenshot"
 print_two_cols "  ${GREEN}RCtrl Arrows${RESET}          → Advanced media control" "  ${GREEN}Brightness Keys${RESET}      → Up/Down"
 print_two_cols "  ${GREEN}RCtrl Up${RESET}              → Cycle player" ""
 
 echo ""
-echo -e "${BOLD}${CYAN}🔒 SYSTEM${RESET}                                                            ${BOLD}${CYAN}🖱️  MOUSE & UI${RESET}"
+echo -e "${SPACES}${BOLD}${CYAN}🔒 SYSTEM${RESET}                                                            ${BOLD}${CYAN}🖱️  MOUSE & UI${RESET}"
 print_two_cols "  ${GREEN}Super L${RESET}               → Lock screen" "  ${GREEN}Super Left Click${RESET}      → Move window"
 print_two_cols "  ${GREEN}Super Shift \`${RESET}         → Save session" "  ${GREEN}Super Right Click${RESET}     → Resize window"
 print_two_cols "  ${GREEN}Super Ctrl \`${RESET}          → Restore session" "  ${GREEN}Super Scroll${RESET}          → Switch workspace"
