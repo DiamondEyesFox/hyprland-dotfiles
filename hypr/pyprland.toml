@@ -96,6 +96,7 @@ margin = 50
 unfocus = "hide"
 lazy = true
 process_tracking = false
+pin = false
 
 [scratchpads.vesktop]
 animation = "fromTop"
