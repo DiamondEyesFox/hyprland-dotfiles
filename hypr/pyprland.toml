@@ -87,6 +87,36 @@ size = "70% 90%"
 margin = 50
 unfocus = "hide"
 
+[scratchpads.plex]
+animation = "fromTop"
+command = "plex"
+class = "Plex"
+size = "85% 90%"
+margin = 50
+unfocus = "hide"
+lazy = true
+process_tracking = false
+
+[scratchpads.vesktop]
+animation = "fromTop"
+command = "flatpak run dev.vencord.Vesktop"
+class = "vesktop"
+size = "85% 90%"
+margin = 50
+unfocus = "hide"
+lazy = true
+process_tracking = false
+
+[scratchpads.obsidian]
+animation = "fromTop"
+command = "obsidian --args 'obsidian://open?vault=DEF%20Master%20Vault'"
+class = "obsidian"
+size = "85% 90%"
+margin = 50
+unfocus = "hide"
+lazy = false
+process_tracking = true
+
 # Expose - Show all windows (like macOS Mission Control)
 [expose]
 include_special = false

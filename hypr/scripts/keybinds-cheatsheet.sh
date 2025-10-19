@@ -46,6 +46,9 @@ print_two_cols "  ${GREEN}Super M${RESET}               → Music player (Plexam
 print_two_cols "  ${GREEN}Super =${RESET}               → Calculator" "  ${GREEN}Super A${RESET}               → Mission Control (Expose)"
 print_two_cols "  ${GREEN}Super D${RESET}               → File manager (Dolphin)" "  ${GREEN}Mouse Btn 277${RESET}         → Mission Control"
 print_two_cols "  ${GREEN}Super Y${RESET}               → File manager (Yazi)" ""
+print_two_cols "  ${GREEN}Super X${RESET}               → Plex media player" ""
+print_two_cols "  ${GREEN}Super R${RESET}               → Vesktop (Discord)" ""
+print_two_cols "  ${GREEN}Super O${RESET}               → Obsidian notes" ""
 print_two_cols "  ${GREEN}Super Shift V${RESET}         → Volume control" ""
 
 echo ""
