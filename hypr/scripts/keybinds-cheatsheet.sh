@@ -49,6 +49,7 @@ print_two_cols "  ${GREEN}Super Y${RESET}               → File manager (Yazi)"
 print_two_cols "  ${GREEN}Super X${RESET}               → Plex media player" ""
 print_two_cols "  ${GREEN}Super R${RESET}               → Vesktop (Discord)" ""
 print_two_cols "  ${GREEN}Super O${RESET}               → Obsidian notes" ""
+print_two_cols "  ${GREEN}Super J${RESET}               → Anki flashcards" ""
 print_two_cols "  ${GREEN}Super Shift V${RESET}         → Volume control" ""
 
 echo ""
@@ -77,10 +78,5 @@ echo -e "${BOLD}${CYAN}🖱️  MOUSE BINDINGS${RESET}"
 print_two_cols "  ${GREEN}Super Left Click${RESET}      → Move window" "  ${GREEN}Super Scroll Up/Down${RESET}  → Switch workspace"
 print_two_cols "  ${GREEN}Super Right Click${RESET}     → Resize window" ""
 
-echo ""
-echo -e "${BOLD}${YELLOW}╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${RESET}"
-echo -e "${BOLD}${YELLOW}║                                                        Press 'q' to close this cheatsheet                                                            ║${RESET}"
-echo -e "${BOLD}${YELLOW}╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${RESET}"
-
-# Keep it open until user presses q
+# Keep it open until user closes
 read -n 1 -s -r key

@@ -117,6 +117,16 @@ unfocus = "hide"
 lazy = false
 process_tracking = true
 
+[scratchpads.anki]
+animation = "fromTop"
+command = "anki"
+class = "anki"
+size = "85% 90%"
+margin = 50
+unfocus = "hide"
+lazy = true
+process_tracking = true
+
 # Expose - Show all windows (like macOS Mission Control)
 [expose]
 include_special = false
