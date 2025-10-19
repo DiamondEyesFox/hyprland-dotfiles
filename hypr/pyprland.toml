@@ -89,14 +89,13 @@ unfocus = "hide"
 
 [scratchpads.plex]
 animation = "fromTop"
-command = "plex"
+command = "env QT_QPA_PLATFORM=xcb Plex"
 class = "Plex"
 size = "85% 90%"
 margin = 50
 unfocus = "hide"
 lazy = true
 process_tracking = false
-pin = false
 
 [scratchpads.vesktop]
 animation = "fromTop"
