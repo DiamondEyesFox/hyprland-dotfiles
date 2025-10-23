@@ -44,13 +44,6 @@ size = "75% 75%"
 margin = 50
 unfocus = "hide"
 
-[scratchpads.volume]
-animation = "fromRight"
-command = "pavucontrol"
-class = "pavucontrol"
-size = "40% 90%"
-unfocus = "hide"
-
 [scratchpads.music]
 animation = "fromBottom"
 command = "flatpak run com.plexamp.Plexamp"
@@ -61,23 +54,15 @@ unfocus = "hide"
 lazy = true
 process_tracking = false
 
-[scratchpads.calc]
-animation = "fromTop"
-command = "qalculate-gtk"
-class = "qalculate-gtk"
-size = "600px 800px"
-margin = 50
-unfocus = "hide"
-
 [scratchpads.files]
 animation = "fromRight"
-command = "dolphin"
+command = "env QT_QPA_PLATFORMTHEME=qt5ct dolphin --new-window"
 class = "org.kde.dolphin"
 size = "80% 90%"
 margin = 50
 unfocus = "hide"
 lazy = true
-process_tracking = false
+process_tracking = true
 
 [scratchpads.yazi]
 animation = "fromRight"
@@ -109,13 +94,13 @@ process_tracking = false
 
 [scratchpads.obsidian]
 animation = "fromTop"
-command = "obsidian --args 'obsidian://open?vault=DEF%20Master%20Vault'"
+command = "obsidian 'obsidian://open?vault=DEF%20Master%20Vault'"
 class = "obsidian"
 size = "85% 90%"
 margin = 50
 unfocus = "hide"
-lazy = false
-process_tracking = true
+lazy = true
+process_tracking = false
 
 [scratchpads.anki]
 animation = "fromTop"
@@ -125,7 +110,7 @@ size = "85% 90%"
 margin = 50
 unfocus = "hide"
 lazy = true
-process_tracking = true
+process_tracking = false
 
 # Expose - Show all windows (like macOS Mission Control)
 [expose]
